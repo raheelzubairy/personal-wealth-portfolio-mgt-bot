@@ -1,12 +1,13 @@
 {
-    "name": "Personal Wealth Portfolio Management Chat Bot",
-    "description": "Use IBM Cloud financial services to demonstrates using multiple interfaces (Twilio & WebUI) with Watson Conversation interacting with a Cloudant NoSQL database.",
+    "name": "Wealth Management Chatbot",
+    "description": "A chatbot that allows the user to query the status of their investments and evaluate the impact of different market scenarios on their investment portfolio. It can easily be extended in several ways.",
     "thumbnailURL": "blueprint/thumbnail.svg",
     "appIconURL": "blueprint/appicon.svg",
     "type": "WEB",
     "tags": [
         "devex"
     ],
+    "demoURL": "https://wealth-management-chatbot-1.mybluemix.net/demo.html",
     "generators": {
         "node": [
             "generator-starterkit-content-downloader",
@@ -21,13 +22,13 @@
             "scope": "@arf"
         },
         "generator-ibm-cloud-enablement": {
-            "version": "1.0.x",
+            "version": "1.0.8",
             "options": {
                 "port": "3000"
             }
         },
         "generator-ibm-service-enablement": {
-            "version": "2.3.x"
+            "version": "2.4.x"
         },
         "generator-starterkit-content-downloader": {
             "version": "0.x.x",
@@ -35,19 +36,22 @@
         }
     },
     "requiredCapabilities": [
-        "cloudant",
-        "conversation",
-        "simulatedInstrumentAnalytics"
+      "cloudant",
+      "conversation",
+      "investmentPortfolio",
+      "simulatedInstrumentAnalytics"
     ],
     "requiredCapabilitiesURLs": {
-        "cloudant": "https://console.bluemix.net/catalog/services/cloudant-nosql-db",
-        "conversation": "https://console.bluemix.net/catalog/services/conversation",
-        "simulatedInstrumentAnalytics": "https://console.bluemix.net/docs/services/SimulatedInstrumentAnalytics"
+      "cloudant": "https://console.bluemix.net/catalog/services/cloudant-nosql-db",
+      "conversation": "https://console.bluemix.net/catalog/services/conversation",
+      "investmentPortfolio": "https://console.bluemix.net/catalog/services/investment-portfolio",
+      "simulatedInstrumentAnalytics" : "https://console.bluemix.net/catalog/services/simulated-instrument-analytics"
     },
     "servicePlans": {
-        "cloudant": "Lite",
-        "conversation": "free",
-        "simulatedInstrumentAnalytics": "fss-scenario-analytics-service-free-plan"
+      "cloudant": "Lite",
+      "conversation": "free",
+      "investmentPortfolio": "free",
+      "simulatedInstrumentAnalytics": "free"
     },
     "email": "cloud@us.ibm.com"
 }
